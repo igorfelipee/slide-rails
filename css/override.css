@@ -1,0 +1,9 @@
+.no-bg-color{
+  background: rgba(0, 0, 0, 0.0);
+}
+.circle-img{
+  border-radius: 50%;
+}
+.text-right{
+  text-align: right !important;
+}

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>GDG Duque de Caxias - Rails</title>
+
+        <meta name="description" content="Uma apresentação de introdução para os eventos e encontros do GDG Duque de Caxias.">
+        <meta name="author" content="Gabriel Lima e Igor Felipe">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.min.css">
+
+        <link rel="stylesheet" href="css/theme/blood.css" id="theme">
+
+        <link rel="shortcut icon" href="./favicon.ico" />
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <meta itemprop="image" content="https://raw.githubusercontent.com/gdgduquedecaxias/introducao/master/img/gdg-caxias-intro.png">
+        <meta name="twitter:image:src" content="https://raw.githubusercontent.com/gdgduquedecaxias/introducao/master/img/gdg-caxias-intro.png">
+        <meta property="og:image" content="https://raw.githubusercontent.com/gdgduquedecaxias/introducao/master/img/gdg-caxias-intro.png"/>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+
+        <!-- override de estilo -->
+        <link rel="stylesheet" href="css/override.css">
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <div class="slides">
+
+                <section>
+                    <h3>Bem vindos!</h3>
+                    <img class="circle-img" style="border:none;" src="./img/rails.png" width="250px" height="250px"/>
+                    <img src="./img/gdg-logo-program.png" class="circle-img" style="border:none" width="250px" height="250px"/>
+                    <h2>GDG Duque de Caxias</h2>
+                    <h3>Usando Rails <b>#1</b></h3>
+                    <p>
+                        <small><a href="http://gdgduquedecaxias.github.io/">GDG Duque de Caxias</a></small>
+                    </p>
+                    <p>
+                        <small>Apresentação criada por <a href="https://www.facebook.com/igor.felipe.198765">Igor Felipe </a> e <a href="https://www.facebook.com/gabrielcslima">Gabriel Lima</a></small>
+                        <br>
+                        <small><a href="http://github.com/gdgduquedecaxias/slide-materialize">Disponível online</a></small>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Rails</h2>
+                    <img class="circle-img" src="./img/iron-rails.png" style="border:none" width="250px" height="250px"/>
+
+                    <h3>O que é?</h3>
+                    <p>
+                      <b>Ruby on Rails</b> é um projeto de código aberto escrito na linguagem de programação Ruby. As aplicações criadas utilizando o <b>framework</b> Rails são desenvolvidas com base no padrão de arquitetura <b>MVC</b> (Model-View-Controller).
+                    </p>
+                </section>
+
+                <section>
+                  <h2>Por que eu deveria usar?</h2>
+                  <ul>
+                    <li>Agilidade</li>
+                    <li>Hard modelin' simple codin'</li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </section>
+
+                <section>
+                    <h3>Agilidade</h3>
+                    <img class="circle-img" src="./img/flash.jpg" style="border:none" width="250px" height="250px"/>
+                    <p>
+                      O <b>Rails</b> permite que você implemente um projeto <b>MVC</b> de forma bastante rápida sem se preocupar com problemas de: requisições <b>AJAX</b>, escrever <b>SQL</b> ou então ficar calculando tempo para fazer CRUD's básicos.
+                    </p>
+
+                </section>
+
+                <section>
+                    <h2>Bruxaria ?</h2>
+                    <img class="circle-img" src="./img/il2.jpg" style="border:none" width="250px" height="250px"/>
+                    <p>
+                      "<i>Um exemplo clássico da importância de conhecer mais a fundo a linguagem Ruby está em desvendar a <b>"magia negra"</b> por trás do Rails. Conceitos como metaprogramação, onde código é criado dinamicamente, são essenciais para o entendimento de qualquer sistema desenvolvido em Rails.</i>"
+                      <br><br><b>Caelum, APOSTILA RUBY ON RAILS</b>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Preciso saber Ruby?</h2>
+                    <img class="circle-img" src="./img/large.jpg" style="border:none" width="450px" height="450px"/>
+                </section>
+
+                <section>
+                    <h3>Hard modelin' simple codin'</h3>
+                    <p>
+                      Você é um daqueles que adora escrever códigos imensos de <b>SQL</b>? <br><br><br>
+                        <code>SQL = "INSERT INTO clientes (nome, data_nascimento, logradouro, bairro, cidade, uf, cpf, rg) VALUES ('$nome', '$data_nascimento', '$logradouro', '$bairro', '$cidade', '$uf', '$cpf', '$rg')"</code>
+                      <br><br>(Sério, só de escrever o exemplo pra vocês, eu dormi 3x)
+                      <br> E isso é apenas um comando SQL de <b> INSERT</b>, imagina um de <b>UPDATE</b>
+                    </p>
+                </section>
+
+                <section>
+                    <p>
+                      Agora imaginem que toda vez que eu tiver que adicionar um campo na tabela, eu tenho que ir alterar o código ?
+                      Alterar o código, esquecer a vírgula, as aspas...
+                      O Rails torna isso mais fácil pra mim! Eu só tenho que escrever isso:
+                    <br><br> <code>
+                    @cliente = Cliente.new(params[:cliente])
+                    <br>
+                    @cliente.save</code>
+                    </p>
+                </section>
+
+
+
+                <section>
+                  <h2>Na prática!</h2>
+                  <img class="circle-img" src="img/uncle-sam2.png" style="border:none" alt="" width="400px" height="400px"/>
+                  <p>
+                    Do yourself
+                  </p>
+                  <img class="circle-img" src="./img/c9.jpg" style="border:none" width="150px" height="150px"/>
+                  <img class="circle-img" src="./img/github.jpg" style="border:none" width="150px" height="150px"/>
+                </section>
+
+                <section>
+                    <h2>Participe</h2>
+                    <p>de nossa <a href="https://plus.google.com/u/0/communities/117328321114732521733">comunidade do Google+</a>, <a href="https://groups.google.com/forum/#!forum/gdg-duque-de-caxias">grupo no Google</a> e <a href="http://github.com/gdg-duque-de-caxias">GitHub</a>!</p>
+                    <p><small>Participação em comunidades e projetos open source costuma ser bom para o currículo além de você aprender muito =]</small></p>
+                </section>
+
+                <section>
+                    <img class="no-bg-color" src="./img/pork-pig.png" style="border:none"/>
+                    <h2>That's all folks!</h2>
+                    <p>Acessem: <a href="http://gdg-duque-de-caxias.github.io/">GDGDuqueDeCaxias.GitHub.io</a></p>
+                    <p><small>Apresentação adaptada com <a href="https://github.com/hakimel/reveal.js">reveal.js</a>. Código disponível no <a href='https://github.com/gdg-duque-de-caxias/slide-materialize'>GitHub</a>.</small></p>
+                    <br>
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Parallax scrolling
+                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                // parallaxBackgroundSize: '2100px 900px',
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>
